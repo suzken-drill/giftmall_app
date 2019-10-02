@@ -1,0 +1,345 @@
+ja:
+  site_title: ショッピー！？
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'バリデーションに失敗しました: %{errors}'
+        restrict_dependent_destroy:
+          has_one: "%{record}が存在しているので削除できません"
+          has_many: "%{record}が存在しているので削除できません"
+    attributes:
+      user:
+        email: メールアドレス
+        nick_name: ニックネーム
+        introduction: 自己紹介
+        current_password: 現在のパスワード
+      owner:
+        owner_name: 事業者名
+        owner_introduction: 備考
+        owner_tel: 電話番号
+        address: 住所
+        current_password: 現在のパスワード
+        biz_hour: 営業時間
+        delivery: 納期
+        support: サポート体制
+        carrier: 運送会社
+      shop:
+        name: ショップ名
+        url: ショップのURL
+        description: 説明文
+        headline: 見出し
+        twitter: Twitterアカウント
+        blog: ブログアドレス
+        youtube: YouTubeチャンネル
+        saleinfo: 最新ニュース
+      category:
+        name: カテゴリー名
+        parent_id: 親カテゴリー
+        order: 並び順
+        description: 説明文
+        slug: 短縮名
+      category_relationship:
+        category: カテゴリー
+        category_id: カテゴリー
+        shop_id: ショップ
+        order: 並び順
+  activemodel:
+    user: ユーザー情報
+    admin_post: 運営記事
+    admin_user: 管理者
+    category: カテゴリー
+    category_relationship: カテゴリー分類
+    contact: お問い合わせ
+    owner: 事業主
+    payment: 決済方法
+    shop_contact: ショップお問い合わせ
+    shop_like: ショップ別いいね
+    shop_payment: ショップ別決済方法
+    shop_photo: ショップ別掲載写真
+    shop_review_eval: ショップ口コミ評価値
+    shop_review_like: ショップ口コミ別いいね
+    shop_review_photo: ショップ口コミ写真
+    shop_review: 口コミ
+    shop: ショップ情報
+    user_relationship: フォーロー情報
+  date:
+    abbr_day_names:
+    - 日
+    - 月
+    - 火
+    - 水
+    - 木
+    - 金
+    - 土
+    abbr_month_names:
+    - 
+    - 1月
+    - 2月
+    - 3月
+    - 4月
+    - 5月
+    - 6月
+    - 7月
+    - 8月
+    - 9月
+    - 10月
+    - 11月
+    - 12月
+    day_names:
+    - 日曜日
+    - 月曜日
+    - 火曜日
+    - 水曜日
+    - 木曜日
+    - 金曜日
+    - 土曜日
+    formats:
+      default: "%Y/%m/%d"
+      long: "%Y年%m月%d日(%a)"
+      short: "%m/%d"
+    month_names:
+    - 
+    - 1月
+    - 2月
+    - 3月
+    - 4月
+    - 5月
+    - 6月
+    - 7月
+    - 8月
+    - 9月
+    - 10月
+    - 11月
+    - 12月
+    order:
+    - :year
+    - :month
+    - :day
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: 約1時間
+        other: 約%{count}時間
+      about_x_months:
+        one: 約1ヶ月
+        other: 約%{count}ヶ月
+      about_x_years:
+        one: 約1年
+        other: 約%{count}年
+      almost_x_years:
+        one: 1年弱
+        other: "%{count}年弱"
+      half_a_minute: 30秒前後
+      less_than_x_seconds:
+        one: 1秒以内
+        other: "%{count}秒未満"
+      less_than_x_minutes:
+        one: 1分以内
+        other: "%{count}分未満"
+      over_x_years:
+        one: 1年以上
+        other: "%{count}年以上"
+      x_seconds:
+        one: 1秒
+        other: "%{count}秒"
+      x_minutes:
+        one: 1分
+        other: "%{count}分"
+      x_days:
+        one: 1日
+        other: "%{count}日"
+      x_months:
+        one: 1ヶ月
+        other: "%{count}ヶ月"
+      x_years:
+        one: 1年
+        other: "%{count}年"
+    prompts:
+      second: 秒
+      minute: 分
+      hour: 時
+      day: 日
+      month: 月
+      year: 年
+  errors:
+    format: "%{attribute}%{message}"
+    messages:
+      accepted: を受諾してください
+      blank: を入力してください
+      confirmation: と%{attribute}の入力が一致しません
+      empty: を入力してください
+      equal_to: は%{count}にしてください
+      even: は偶数にしてください
+      exclusion: は予約されています
+      greater_than: は%{count}より大きい値にしてください
+      greater_than_or_equal_to: は%{count}以上の値にしてください
+      inclusion: は一覧にありません
+      invalid: は不正な値です
+      less_than: は%{count}より小さい値にしてください
+      less_than_or_equal_to: は%{count}以下の値にしてください
+      model_invalid: 'バリデーションに失敗しました: %{errors}'
+      not_a_number: は数値で入力してください
+      not_an_integer: は整数で入力してください
+      odd: は奇数にしてください
+      other_than: は%{count}以外の値にしてください
+      present: は入力しないでください
+      required: を入力してください
+      taken: はすでに存在します
+      too_long: は%{count}文字以内で入力してください
+      too_short: は%{count}文字以上で入力してください
+      wrong_length: は%{count}文字で入力してください
+    template:
+      body: 次の項目を確認してください
+      header:
+        one: "%{model}にエラーが発生しました"
+        other: "%{model}に%{count}個のエラーが発生しました"
+  helpers:
+    select:
+      prompt: 選択してください
+    submit:
+      create: 登　録
+      submit: 保　存
+      update: 更　新
+  number:
+    currency:
+      format:
+        delimiter: ","
+        format: "%n%u"
+        precision: 0
+        separator: "."
+        significant: false
+        strip_insignificant_zeros: false
+        unit: 円
+    format:
+      delimiter: ","
+      precision: 3
+      separator: "."
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: 十億
+          million: 百万
+          quadrillion: 千兆
+          thousand: 千
+          trillion: 兆
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n%u"
+        units:
+          byte: バイト
+          eb: EB
+          gb: GB
+          kb: KB
+          mb: MB
+          pb: PB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n%"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: "、"
+      two_words_connector: "、"
+      words_connector: "、"
+  time:
+    am: 午前
+    formats:
+      default: "%Y年%m月%d日(%a) %H時%M分%S秒 %z"
+      long: "%Y/%m/%d %H:%M"
+      short: "%m/%d %H:%M"
+      date: "%Y/%m/%d"
+    pm: 午後
+  message:
+    form_error: "入力内容をご確認ください"
+    system_error: "システムエラーが発生しました！やり直してください"
+    send_email_thanks: "お問い合わせを受け付けました"
+    user_not_exist_error: "ユーザーは存在していません"
+    shop_not_exist_error: "ショップは存在していません"
+    owner_not_exist_error: "オーナー会員は存在していません"
+    shop_review_not_exist_error: "口コミは存在していません"
+    page_not_exist_error: "ページが見つかりませんでした"
+    owner_not_authority_error: "ショップ編集の権限がありません"
+    are_you_sure: "戻せませんが、本当によろしいですか？"
+    not_authenticate_user_error: "一般会員からログアウトしてください"
+    not_authenticate_owner_error: "オーナー会員からログアウトしてください"
+    password_confirmation_error: パスワードが一致しません
+    contact_form:
+      form_name_error: "お名前を入力してください"
+      form_email_error: "メールアドレスを入力してください"
+      form_email_length_error: "メールアドレスが長すぎます"
+      form_email_format_error: "メールアドレスの形式に誤りがあります"
+      form_message_error: "お問い合わせ内容を入力してください"
+      form_shop_name_error: "店舗名を入力してください"
+      form_person_name_error: "ご担当者名を入力してください"
+      form_other_error: "システムエラーが発生しました"
+    category:
+      name_blank_error: "カテゴリー名を入力してください"
+      slug_blank_error: "略称を入力してください"
+      parent_id_blank_error: "親カテゴリーを選択してください"
+    shop:
+      name_blank_error: "を入力してください"
+      url_blank_error: "を入力してください"
+      url_format_error: "形式に誤りがあります"
+      description_blank_error: "を入力してください"
+      headline_blank_error: "を入力してください"
+      headline_length_error: "が長すぎます"
+    shop_review:
+      shop_id_blank_error: "ショップが選択されていません"
+      item_name_blank_error: "購入商品名を入力してください"
+      description_blank_error: "口コミ内容を入力してください"
+      purchased_at_blank_error: "購入日を入力してください"
+      shop_review_insert: "口コミの登録が完了しました"
+    shop_review_eval:
+      eval_key_blank_error: "評価項目を選んでください"
+      eval_key_choice_error: "評価項目を選択肢から選んでください"
+      eval_value_blank_error: "評価がされていません"
+      eval_values_blank_error: "#{order}の評価がされていません"
+      eval_value_choice_error: "評価を選択肢から選んでください"
+    shop_review_photo:
+      filename_blank_error: "ファイルを選択してください"
+      comment_length_error: "注釈が長すぎます"
+    admin_post:
+      title_blank_error: "タイトルを入力してください"
+      title_length_error: "タイトルが長すぎます"
+      content_blank_error: "内容を入力してください"
+      content_length_error: "内容が長すぎます"
+      excerpt_blank_error: "抜粋を入力してください"
+      excerpt_length_error: "抜粋が長すぎます"
+      status_choice_error: "ステータスの選択に誤りがあります"
+      post_type_choice_error: "種別の選択に誤りがあります"
+    owner_shop:
+      owner_shop_create: "ショップの登録が完了しました"
+      owner_shop_update: "ショップの更新が完了しました"
+      owner_shop_destroy: "ショップの削除が完了しました"
+    category_relationship:
+      category_id_blank_error: "カテゴリーを選択してください"
+      shop_id_blank_error: "ショップが不明です"
+    shop_photo:
+      filename_blank_error: "ショップの写真を選択してください"
+      photo_type_blank_error: "写真の種別を選択してください"
+      photo_type_choice_error: "写真の種別選択に誤りがあります"
+    payment:
+      name_blank_error: "支払名を入力してください"
+    shop_payment:
+      payment_id_blank_error: "支払方法が選択されていません"
+    owner:
+      owner_name_blank_error: "事業者名を入力してください"
+      owner_introduction_blank_error: "備考を入力してください"
+      owner_tel_blank_error: "電話番号を入力してください"
+      address_blank_error: "住所を入力してください"
+      biz_hour_blank_error: "営業時間を入力してください"
+      delivery_blank_error: "納期を入力してください"
+      support_blank_error: "サポート体制を入力してください"
+      carrier_blank_error: "運送会社を入力してください"
