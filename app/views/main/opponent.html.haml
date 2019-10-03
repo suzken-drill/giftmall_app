@@ -1,0 +1,14 @@
+%h2 プレゼントを送る相手は？
+
+- content_for :breadcrumb do
+  %nav{"aria-label": "breadcrumb"}
+    %ol.breadcrumb
+      %li.breadcrumb-item= link_to "イベント", root_path
+      %li.breadcrumb-item.active 相手
+      %li.breadcrumb-item 予算
+
+= form_with url: price_path, local: true do |f|
+  .form-group
+    = f.select :opponent, Wizard::Question::SELECT_OPPONENTS, {}, {class: "form-control"}
+  .form-btn
+    = f.submit "次　へ", class: "btn btn-warning"

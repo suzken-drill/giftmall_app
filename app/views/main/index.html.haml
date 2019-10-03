@@ -1,0 +1,14 @@
+%h2 あなたがプレゼントを渡すイベントは？
+
+- content_for :breadcrumb do
+  %nav{"aria-label": "breadcrumb"}
+    %ol.breadcrumb
+      %li.breadcrumb-item.active イベント
+      %li.breadcrumb-item 相手
+      %li.breadcrumb-item 予算
+
+= form_with url: opponent_path, local: true do |f|
+  .form-group
+    = f.select :event, Wizard::Question::SELECT_EVENTS, {}, {class: "form-control"}
+  .form-btn
+    = f.submit "次　へ", class: "btn btn-warning"
