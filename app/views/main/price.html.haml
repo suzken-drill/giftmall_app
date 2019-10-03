@@ -9,6 +9,6 @@
 
 = form_with url: result_path, local: true do |f|
   .form-group
-    = f.select :price, PriceSelectForm::SELECT_ITEMS, {}, {class: "form-control"}
+    = f.select :price, Wizard::Question::SELECT_PRICES, {}, {class: "form-control"}
   .form-btn
     = f.submit "結　果", class: "btn btn-warning"
