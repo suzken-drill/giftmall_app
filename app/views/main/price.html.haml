@@ -1,0 +1,14 @@
+%h2 プレゼントの予算は？
+
+- content_for :breadcrumb do
+  %nav{"aria-label": "breadcrumb"}
+    %ol.breadcrumb
+      %li.breadcrumb-item= link_to "イベント", root_path
+      %li.breadcrumb-item= link_to "相手", opponent_path
+      %li.breadcrumb-item.active 予算
+
+= form_with url: result_path, local: true do |f|
+  .form-group
+    = f.select :price, PriceSelectForm::SELECT_ITEMS, {}, {class: "form-control"}
+  .form-btn
+    = f.submit "結　果", class: "btn btn-warning"

@@ -1,0 +1,23 @@
+%h2 おすすめのプレゼントはこちら！
+
+- if @items.present?
+  %ul.items
+    - @items.each do |item|
+      %li.item
+        .image= link_to image_tag(item[:image], width: 300), item[:url], target: :_blank
+        .title= link_to item[:title], item[:url], target: :_blank
+        .price= link_to item[:price], item[:url], target: :_blank
+- else
+  %p 条件に合う商品が見つかりませんでした
+
+.restart-btn= link_to "条件を選びなおす", root_path, class: "btn btn-warning"
+%hr
+%p.message
+  気に入ってもらえそうなプレゼントはまだまだ沢山！
+  %br
+  こっちも見てみては？
+  %br
+  %i.material-icons keyboard_arrow_down
+
+.banner= link_to image_tag("https://pub.a8.net/data/s00000016130//banner/201602091540046790.jpg"), "https://giftmall.co.jp/", target: :_blank
+
