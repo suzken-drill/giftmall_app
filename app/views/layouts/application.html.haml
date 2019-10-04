@@ -15,9 +15,9 @@
     = render "layouts/header"
 
     .container
-      = yield :breadcrumb
+      %section.header= yield :breadcrumb
 
     .container
-      = yield
+      %section.body= yield
 
     = render "layouts/footer"

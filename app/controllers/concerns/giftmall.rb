@@ -5,7 +5,8 @@ module Giftmall
   extend ActiveSupport::Concern
 
   def get_giftmall(cat_num, price)
-    url = "https://giftmall.silveregg.net/pycre5/jsonp/dispatch?action=pc215&page_type=pc_list&cookie=553fd48fd43d19e606c6c308230992c77ca1c91ad8afc9efafca4b7d6196da9a&num=20&merch=giftmall&t=#{cat_num}"
+    number = Random.rand(15..20)
+    url = "https://giftmall.silveregg.net/pycre5/jsonp/dispatch?action=pc215&page_type=pc_list&cookie=553fd48fd43d19e606c6c308230992c77ca1c91ad8afc9efafca4b7d6196da9a&num=#{number}&merch=giftmall&t=#{cat_num}"
     # Rails.logger.debug url
     charset = nil
     result = open(url) do |f|
@@ -17,7 +18,7 @@ module Giftmall
     doc = JSON.parse(result)
     # Rails.logger.debug doc.inspect
     items = []
-    doc["items"].reverse.each do |item|
+    doc["items"].shuffle.each do |item|
       if price.blank?
       	items << { title: item[0]["title"], image: item[0]["img_url"], url: item[0]["ct_url"], price: item[0]["price_string"] }
       else
