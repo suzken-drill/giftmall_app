@@ -57,7 +57,9 @@ ol.breadcrumb {
 	padding: 0;
 	margin: 0 0 20px 0;
 	section {
-		padding: 0 10%;
+		max-width: 600px;
+		padding: 0 5%;
+		margin: 0 auto;
 	}
 	h2 {
 		font-size: 1.1rem;
@@ -83,7 +85,7 @@ ol.breadcrumb {
 		margin: 0 0 30px 0;
 		li {
 			border: 1px solid $khaki;
-			padding: 20px;
+			padding: 20px 5px;
 			margin: 0 0 10px 0;
 			.image img {
 				border-radius: 20px;
@@ -121,6 +123,7 @@ ol.breadcrumb {
 		}
 	}
 	.banner {
+		position: relative;
 		text-align: center;
 	}
 }
